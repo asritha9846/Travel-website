@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Quotes</button>
+    <p></p>
+    <style>
+        p{ 
+            height: 100vh ;
+            color: black;
+            display: flex;
+           justify-content: center;
+            font-size: 100px;
+            font-family:cursive;
+        }
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            background-color: darkseagreen;
+            width: 10%;
+            font-size: 15px;
+        }
+
+
+    </style>
+
+
+    <script>
+        var p = document.querySelector('p')
+        var btn= document.querySelector('button')
+        btn.addEventListener('click',display)
+
+        
+        function display(){
+        var quotes = ['Be happy', 'Peace begins with smile', 'Less, but better', 'know your worth', 'Less perfection, more authenticity', 'Trust the timing of your life', 'Soul full of sunshine','Be the light','Dont just exist, live', 'See good in all things', 'Your patience is your power','Think positive','Be Yourself','Stay strong','Peace of mind']
+        for(i=0;i<quotes.length;i++){
+        var ran = Math.round(Math.random()*quotes.length)
+        }
+        p.innerHTML = quotes[ran]
+
+        var a = '0123456789ABCDEF'
+        var b= '#'
+        for(i=1;i<6;i++){
+           ran = Math.floor(Math.random()*16)
+          b+=a[ran]
+          document.body.style.background=b
+        }
+        console.log(b)
+        
+       }
+    
+
+
+    </script>
+</body>
+</html>
